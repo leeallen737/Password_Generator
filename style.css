@@ -67,6 +67,7 @@ body {
 
 .buttons:hover {
     opacity: 0.5;
+    transition: opacity ease 0.5s;
 }
 
 .horizontal-line {
@@ -99,4 +100,9 @@ body {
     margin-top: 20px;
     text-align: center;
     font-weight: 500;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity ease-in-out 5s ;
 }

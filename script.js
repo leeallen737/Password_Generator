@@ -20,11 +20,24 @@ buttonEl.addEventListener('click', function() {
 passwordOne.addEventListener('click', function() {
     navigator.clipboard.writeText(passwordOne.innerText)
     copied.textContent = 'Copied to Clipboard!'
+    copied.className = "copied"
+
+    setTimeout(function(){
+        copied.className = "copied fade"
+    }, 1000);
+
+    
 })
 
 passwordTwo.addEventListener('click', function() {
     navigator.clipboard.writeText(passwordTwo.innerText)
     copied.textContent = 'Copied to Clipboard!'
+
+    setTimeout(function(){
+        copied.className = "copied fade"
+    }, 1000);
+
+    
 })
 
 function randomPassword() {
