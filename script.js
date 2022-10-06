@@ -13,6 +13,8 @@ let copied = document.getElementById('copied')
 buttonEl.addEventListener('click', function() {
     passwordOne.textContent = '?H):QX`KgDt(00N)'
     passwordTwo.textContent = ')KRiA^o-3fjF/XRZ'
+
+    randomPassword()
 })
 
 passwordOne.addEventListener('click', function() {
@@ -24,3 +26,18 @@ passwordTwo.addEventListener('click', function() {
     navigator.clipboard.writeText(passwordTwo.innerText)
     copied.textContent = 'Copied to Clipboard!'
 })
+
+function randomPassword() {
+    passwordOne.textContent = ''
+    passwordTwo.textContent = ''
+
+    for(let i = 0; i < 16; i++) {
+
+        let randomNumbersOne = Math.floor(Math.random() * characters.length)
+        let randomNumbersTwo = Math.floor(Math.random() * 61)
+
+        passwordOne.textContent += characters[randomNumbersOne]
+        passwordTwo.textContent += characters[randomNumbersTwo]
+
+    }
+}
